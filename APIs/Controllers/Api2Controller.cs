@@ -50,6 +50,13 @@ namespace APIs.Controllers
             }
 
         }
+        
+        [HttpGet]
+        [Route("ShowMeTheCode")]
+        public IActionResult ShowMeTheCode()
+        {
+            return Ok("https://github.com/GlauberDev/Calcula-Juros");
 
+        }
     }
 }

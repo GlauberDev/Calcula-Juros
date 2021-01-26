@@ -30,5 +30,16 @@ namespace APIs.Test
 
 
         }
+
+        [Fact]
+        public async Task Test2()
+        {
+            _client.BaseAddress = new Uri("https://localhost:44371/api/api2/");
+            var responseTask = await _client.GetAsync("showmethecode");
+            Assert.Equal(HttpStatusCode.OK, responseTask.StatusCode);
+
+
+        }
+
     }
 }
